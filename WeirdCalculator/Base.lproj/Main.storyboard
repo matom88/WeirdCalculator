@@ -1,24 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weird Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeirdCalculatorViewController" customModule="WeirdCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1e-a2-eU0">
+                                <rect key="frame" x="50" y="77.000000000000014" width="290" height="193.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="I7X-Lv-gYU">
+                                        <rect key="frame" x="92" y="0.0" width="106" height="193.33333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="150"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.10230654761904762" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="I7X-Lv-gYU" firstAttribute="centerY" secondItem="Z1e-a2-eU0" secondAttribute="centerY" id="Czf-5W-PfH"/>
+                                    <constraint firstItem="I7X-Lv-gYU" firstAttribute="top" secondItem="Z1e-a2-eU0" secondAttribute="top" id="WlZ-zj-vjc"/>
+                                    <constraint firstItem="I7X-Lv-gYU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Z1e-a2-eU0" secondAttribute="leading" id="cxP-Cc-KAQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="I7X-Lv-gYU" secondAttribute="bottom" id="dVu-89-DCE"/>
+                                    <constraint firstAttribute="width" secondItem="Z1e-a2-eU0" secondAttribute="height" multiplier="3:2" id="iQK-Jz-9TZ"/>
+                                    <constraint firstItem="I7X-Lv-gYU" firstAttribute="centerX" secondItem="Z1e-a2-eU0" secondAttribute="centerX" id="onI-3Z-vtT"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I7X-Lv-gYU" secondAttribute="trailing" id="tPJ-79-Ig2"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mc1-Vb-Otu">
+                                <rect key="frame" x="50" y="410.33333333333326" width="290" height="369.66666666666674"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGX-fr-IkK">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="62"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="ADD"/>
+                                        <connections>
+                                            <action selector="addNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hti-2r-VR3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fs-e8-2X2">
+                                        <rect key="frame" x="0.0" y="77" width="290" height="62"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="SUBSTRACT"/>
+                                        <connections>
+                                            <action selector="substractNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THb-Jf-B9c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHM-wo-aFS">
+                                        <rect key="frame" x="0.0" y="154.00000000000006" width="290" height="61.666666666666657"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="MULTIPLY"/>
+                                        <connections>
+                                            <action selector="multiplyNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6w-Jd-0jf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHO-9X-3qa">
+                                        <rect key="frame" x="0.0" y="230.66666666666669" width="290" height="62"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="AVERAGE"/>
+                                        <connections>
+                                            <action selector="averageNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="abY-SC-Ygw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5J-L3-yPF">
+                                        <rect key="frame" x="0.0" y="307.66666666666669" width="290" height="62"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="POWER"/>
+                                        <connections>
+                                            <action selector="powerNumbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnK-fb-7rn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.08766475340136054" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LGX-fr-IkK" firstAttribute="width" secondItem="Mc1-Vb-Otu" secondAttribute="width" id="HiJ-Jc-TXX"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Separate by spaces" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="x1D-GD-ljh">
+                                <rect key="frame" x="50" y="300.33333333333331" width="290" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Glw-Au-jqR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mc1-Vb-Otu" secondAttribute="bottom" constant="30" id="0j9-AA-w9F"/>
+                            <constraint firstItem="Z1e-a2-eU0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="7dA-FP-VDn"/>
+                            <constraint firstItem="Z1e-a2-eU0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="D0I-cD-Keg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z1e-a2-eU0" secondAttribute="trailing" constant="50" id="Jq2-l8-yem"/>
+                            <constraint firstItem="Mc1-Vb-Otu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="NdL-eU-n5h"/>
+                            <constraint firstItem="Mc1-Vb-Otu" firstAttribute="top" secondItem="x1D-GD-ljh" secondAttribute="bottom" constant="30" id="PQg-S7-i3g"/>
+                            <constraint firstItem="x1D-GD-ljh" firstAttribute="width" secondItem="Z1e-a2-eU0" secondAttribute="width" id="Y7c-uT-hIi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mc1-Vb-Otu" secondAttribute="trailing" constant="50" id="aRt-th-Nmy"/>
+                            <constraint firstItem="x1D-GD-ljh" firstAttribute="top" secondItem="Z1e-a2-eU0" secondAttribute="bottom" constant="30" id="cqW-dv-6r9"/>
+                            <constraint firstItem="x1D-GD-ljh" firstAttribute="centerX" secondItem="Z1e-a2-eU0" secondAttribute="centerX" id="xSg-J5-7Fd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputField" destination="x1D-GD-ljh" id="8lg-fZ-0Pq"/>
+                        <outlet property="resultLabel" destination="I7X-Lv-gYU" id="2df-oJ-iDq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30.769230769230766" y="-28.436018957345969"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

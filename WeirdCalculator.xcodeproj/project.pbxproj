@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		1702438D290BEB10004006BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702438C290BEB10004006BE /* AppDelegate.swift */; };
 		1702438F290BEB10004006BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702438E290BEB10004006BE /* SceneDelegate.swift */; };
-		17024391290BEB10004006BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17024390290BEB10004006BE /* ViewController.swift */; };
+		17024391290BEB10004006BE /* WeirdCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17024390290BEB10004006BE /* WeirdCalculatorViewController.swift */; };
 		17024394290BEB10004006BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17024392290BEB10004006BE /* Main.storyboard */; };
 		17024396290BEB11004006BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17024395290BEB11004006BE /* Assets.xcassets */; };
 		17024399290BEB11004006BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17024397290BEB11004006BE /* LaunchScreen.storyboard */; };
 		170243A4290BEB11004006BE /* WeirdCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170243A3290BEB11004006BE /* WeirdCalculatorTests.swift */; };
 		170243AE290BEB11004006BE /* WeirdCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170243AD290BEB11004006BE /* WeirdCalculatorUITests.swift */; };
 		170243B0290BEB11004006BE /* WeirdCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170243AF290BEB11004006BE /* WeirdCalculatorUITestsLaunchTests.swift */; };
+		170243BF290BF814004006BE /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170243BE290BF814004006BE /* Operator.swift */; };
+		170243C4290BF87B004006BE /* Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170243C3290BF87B004006BE /* Multiply.swift */; };
+		53390A18294CC6AC0034CCC5 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390A17294CC6AC0034CCC5 /* Add.swift */; };
+		53390A1A294CC6BB0034CCC5 /* Substract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390A19294CC6BB0034CCC5 /* Substract.swift */; };
+		53390A1C294CCB780034CCC5 /* Average.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390A1B294CCB780034CCC5 /* Average.swift */; };
+		53390B3A294CDD750034CCC5 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53390B39294CDD750034CCC5 /* Power.swift */; };
+		53D66491297ACDD5001D2432 /* Divide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D66490297ACDD5001D2432 /* Divide.swift */; };
+		53D8A34C290C062D009614FF /* Array+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D8A34B290C062D009614FF /* Array+Modifiers.swift */; };
+		53D8A34E290C083E009614FF /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D8A34D290C083E009614FF /* Input.swift */; };
+		53D8A352290C0980009614FF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D8A351290C0980009614FF /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +49,7 @@
 		17024389290BEB10004006BE /* WeirdCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeirdCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1702438C290BEB10004006BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1702438E290BEB10004006BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		17024390290BEB10004006BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17024390290BEB10004006BE /* WeirdCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdCalculatorViewController.swift; sourceTree = "<group>"; };
 		17024393290BEB10004006BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17024395290BEB11004006BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17024398290BEB11004006BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,16 @@
 		170243A9290BEB11004006BE /* WeirdCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeirdCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		170243AD290BEB11004006BE /* WeirdCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdCalculatorUITests.swift; sourceTree = "<group>"; };
 		170243AF290BEB11004006BE /* WeirdCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeirdCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		170243BE290BF814004006BE /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		170243C3290BF87B004006BE /* Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiply.swift; sourceTree = "<group>"; };
+		53390A17294CC6AC0034CCC5 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		53390A19294CC6BB0034CCC5 /* Substract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Substract.swift; sourceTree = "<group>"; };
+		53390A1B294CCB780034CCC5 /* Average.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Average.swift; sourceTree = "<group>"; };
+		53390B39294CDD750034CCC5 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
+		53D66490297ACDD5001D2432 /* Divide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divide.swift; sourceTree = "<group>"; };
+		53D8A34B290C062D009614FF /* Array+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Modifiers.swift"; sourceTree = "<group>"; };
+		53D8A34D290C083E009614FF /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		53D8A351290C0980009614FF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +119,12 @@
 		1702438B290BEB10004006BE /* WeirdCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				170243BC290BF7DC004006BE /* DI */,
+				170243BD290BF7E2004006BE /* TDD */,
+				53D8A34A290C05D3009614FF /* Extensions */,
 				1702438C290BEB10004006BE /* AppDelegate.swift */,
 				1702438E290BEB10004006BE /* SceneDelegate.swift */,
-				17024390290BEB10004006BE /* ViewController.swift */,
+				17024390290BEB10004006BE /* WeirdCalculatorViewController.swift */,
 				17024392290BEB10004006BE /* Main.storyboard */,
 				17024395290BEB11004006BE /* Assets.xcassets */,
 				17024397290BEB11004006BE /* LaunchScreen.storyboard */,
@@ -125,6 +148,53 @@
 				170243AF290BEB11004006BE /* WeirdCalculatorUITestsLaunchTests.swift */,
 			);
 			path = WeirdCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		170243BC290BF7DC004006BE /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				53D8A350290C091A009614FF /* Protocols */,
+				53D8A34F290C0852009614FF /* DTO(Models) */,
+				170243C3290BF87B004006BE /* Multiply.swift */,
+				53390A17294CC6AC0034CCC5 /* Add.swift */,
+				53390A19294CC6BB0034CCC5 /* Substract.swift */,
+				53390A1B294CCB780034CCC5 /* Average.swift */,
+				53390B39294CDD750034CCC5 /* Power.swift */,
+				53D66490297ACDD5001D2432 /* Divide.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		170243BD290BF7E2004006BE /* TDD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TDD;
+			sourceTree = "<group>";
+		};
+		53D8A34A290C05D3009614FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53D8A34B290C062D009614FF /* Array+Modifiers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53D8A34F290C0852009614FF /* DTO(Models) */ = {
+			isa = PBXGroup;
+			children = (
+				53D8A34D290C083E009614FF /* Input.swift */,
+				53D8A351290C0980009614FF /* Result.swift */,
+			);
+			path = "DTO(Models)";
+			sourceTree = "<group>";
+		};
+		53D8A350290C091A009614FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				170243BE290BF814004006BE /* Operator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +328,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17024391290BEB10004006BE /* ViewController.swift in Sources */,
+				53D66491297ACDD5001D2432 /* Divide.swift in Sources */,
+				53D8A352290C0980009614FF /* Result.swift in Sources */,
+				53390A18294CC6AC0034CCC5 /* Add.swift in Sources */,
+				17024391290BEB10004006BE /* WeirdCalculatorViewController.swift in Sources */,
+				53390B3A294CDD750034CCC5 /* Power.swift in Sources */,
+				53390A1A294CC6BB0034CCC5 /* Substract.swift in Sources */,
+				170243BF290BF814004006BE /* Operator.swift in Sources */,
+				170243C4290BF87B004006BE /* Multiply.swift in Sources */,
+				53D8A34C290C062D009614FF /* Array+Modifiers.swift in Sources */,
 				1702438D290BEB10004006BE /* AppDelegate.swift in Sources */,
+				53D8A34E290C083E009614FF /* Input.swift in Sources */,
+				53390A1C294CCB780034CCC5 /* Average.swift in Sources */,
 				1702438F290BEB10004006BE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +517,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L7MQ993QZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeirdCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -464,6 +545,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L7MQ993QZS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeirdCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
