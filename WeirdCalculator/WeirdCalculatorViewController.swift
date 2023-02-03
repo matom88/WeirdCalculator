@@ -25,7 +25,7 @@ class WeirdCalculatorViewController: UIViewController {
         var extractedValues = inputField?.text?.split(separator: " ").compactMap { Int($0) } ?? []
 
         guard let firstExtracted = extractedValues.popFirst() else {
-          let result: Result = 0
+          let result = Result(outputNumber: 0)
             update(result)
             return
         }
@@ -35,13 +35,13 @@ class WeirdCalculatorViewController: UIViewController {
     }
 
     private func update(_ result: Result) {
-        resultLabel?.text = "\(result)"
+      resultLabel?.text = "\(result.outputNumber)"
     }
 
-  private func executeOperation(ofType operationType: OperationType) {
+  private func executeOperation(_ operation: Operation) {
     extractValues()
     let input = Input(first: first, rest: rest)
-    let output = operationType.calculate(input: input)
+    let output = operation.process(input)
     update(output)
   }
 
@@ -49,6 +49,24 @@ class WeirdCalculatorViewController: UIViewController {
 
 extension WeirdCalculatorViewController {
 
-  @IBOutlet add
+  @IBAction func addNumbers(_ sender: UIButton) {
+    executeOperation(Add())
+  }
+
+  @IBAction func substractNumbers(_ sender: UIButton) {
+    executeOperation(Substract())
+  }
+
+  @IBAction func multiplyNumbers(_ sender: UIButton) {
+    executeOperation(Multiply())
+  }
+
+  @IBAction func averageNumbers(_ sender: UIButton) {
+    executeOperation(Average())
+  }
+
+  @IBAction func powerNumbers(_ sender: UIButton) {
+    executeOperation(Power())
+  }
 
 }

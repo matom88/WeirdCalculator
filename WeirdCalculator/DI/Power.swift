@@ -1,17 +1,15 @@
 //
-//  Multiply.swift
-//  WeirdCalculator
-//
-//  Created by Mauricio Torres Mejia on 28.10.22.
+//  Power.swift
+//  Copyright © 2021 Just Eat Takeaway. All rights reserved.
 //
 
 import Foundation
 
-class Multiply: Operation {
+class Power: Operation {
   var process: CalculationProcess = { input in
     var partialResult = input.first
     input.rest.forEach {
-      partialResult = partialResult * $0
+      partialResult = Int(pow(Double(partialResult), Double($0)))
     }
     let resultValue = partialResult
     return Result(outputNumber: resultValue)

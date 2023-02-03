@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol Operator {
-    func operate(firstValue: Int, rest: [Int]) -> Int
+typealias CalculationProcess = (Input) -> Result
+
+protocol Operation {
+
+  var process: CalculationProcess { get }
+
 }

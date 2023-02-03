@@ -5,8 +5,8 @@
 
 import Foundation
 
-//struct Result {
-//
-//  let outputNumber: Int
-//
-//}
+struct Result {
+
+  let outputNumber: Int
+
+}
