@@ -160,7 +160,6 @@
 				53390A19294CC6BB0034CCC5 /* Substract.swift */,
 				53390A1B294CCB780034CCC5 /* Average.swift */,
 				53390B39294CDD750034CCC5 /* Power.swift */,
-				53D66490297ACDD5001D2432 /* Divide.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -168,6 +167,7 @@
 		170243BD290BF7E2004006BE /* TDD */ = {
 			isa = PBXGroup;
 			children = (
+				53D66490297ACDD5001D2432 /* Divide.swift */,
 			);
 			path = TDD;
 			sourceTree = "<group>";
